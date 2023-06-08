@@ -32,3 +32,22 @@ if [[ ! -f "${filename%.*}.$format" ]]; then
 fi
 
 echo "Extração da legenda concluída!"
+
+echo "Traduzindo a legenda para o idioma desejado..."
+
+# Traduz a legenda usando o Google Translate (requer acesso à internet)
+input_file="${filename%.*}.$format"
+output_file="${filename%.*}_translated.$format"
+total_lines=$(wc -l < "$input_file")
+translated_lines=0
+
+while IFS= read -r line; do
+  translated_line=$(trans -no-auto -b -e google -s en -t pt-br "$line")
+  echo "$translated_line" >> "$output_file"
+
+  translated_lines=$((translated_lines + 1))
+  percentage=$((translated_lines * 100 / total_lines))
+  echo -ne "Progresso: $percentage%\r"
+done < "$input_file"
+
+echo "Tradução da legenda concluída!"
