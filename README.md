@@ -21,7 +21,7 @@ Certifique-se de fornecer o caminho completo para o arquivo MKV, se ele estiver 
 ## Exemplo
 Suponha que você tenha um arquivo MKV chamado video.mkv e deseje extrair a segunda faixa de legenda para o formato SRT. Você pode executar o seguinte comando:
 
-$ ./legenda.sh video.mkk
+$ ./legenda.sh video.mkv
 
 Isso extrairá a legenda do arquivo video.mkv e a salvará como video.srt.
 
