@@ -1,5 +1,5 @@
 # Extrair legenda para SRT
-Este script foi desenvolvido para extrair a legenda de um arquivo MKV e convertê-la para o formato SRT. Além disso, caso a legenda esteja no formato ASS, o script realiza a conversão para SRT.
+Este script foi desenvolvido para extrair a legenda de um arquivo MKV para o formato SRT. Além disso, caso a legenda esteja no formato ASS, o script realiza a conversão para SRT.
 
 ## Pré-requisitos
 O script foi projetado para ser executado em um ambiente Linux.
